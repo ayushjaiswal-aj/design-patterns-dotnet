@@ -10,17 +10,20 @@ namespace DesignPattersInDotNet.CreationalPattern
     {
         private static ThreadSafeSingleton _instance;
 
+        public String Value { get; set; }
+
         private ThreadSafeSingleton() { }
 
         private static readonly object _lock = new object();
 
-        public static ThreadSafeSingleton GetInstance()
+        public static ThreadSafeSingleton GetInstance(String value)
         {
             lock (_lock)
             {
                 if (_instance == null)
                 {
                     _instance = new ThreadSafeSingleton();
+                    _instance.Value = value;
                 }
             }
             return _instance;

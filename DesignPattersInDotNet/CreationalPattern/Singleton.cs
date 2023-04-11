@@ -9,16 +9,20 @@ namespace DesignPattersInDotNet.CreationalPattern
     public sealed class Singleton
     {
         private static Singleton _instance = null;
+        public String Value { get; set; }
+
         private Singleton()
         {
 
         }
 
-        public static Singleton GetInstance()
+        public static Singleton GetInstance(String value)
         {
             if(_instance == null)
             {
-                return new Singleton();
+                _instance = new Singleton();
+                _instance.Value = value;
+                return _instance;
             }
             return _instance;
         }

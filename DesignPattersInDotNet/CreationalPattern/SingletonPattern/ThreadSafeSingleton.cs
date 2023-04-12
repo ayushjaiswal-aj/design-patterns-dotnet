@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DesignPattersInDotNet.CreationalPattern
+namespace DesignPattersInDotNet.CreationalPattern.SingletonPattern
 {
     public sealed class ThreadSafeSingleton
     {

@@ -1,4 +1,4 @@
-﻿using DesignPattersInDotNet.CreationalPattern;
+﻿using DesignPattersInDotNet.CreationalPattern.SingletonPattern;
 using NUnit.Framework;
 using System;
 using System.Collections.Generic;
@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DesignPatternsInDotNet.Tests.CreationalPattern
+namespace DesignPatternsInDotNet.Tests.CreationalPattern.SingletonPattern
 {
     [TestFixture]
     public class SingletonTests

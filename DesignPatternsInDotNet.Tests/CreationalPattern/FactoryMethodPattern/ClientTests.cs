@@ -21,5 +21,16 @@ namespace DesignPatternsInDotNet.Tests.CreationalPattern
 
             Assert.That(actualOperationResponse, Is.EqualTo(expectedOperationResponse));
         }
+
+        [Test]
+        public void ClientOperation_WhenProvidedWithConcreateCreator2_ShouldPerformOperationFromConcreteProduct2()
+        {
+            Creator creator = new ConcreteCreator2();
+            String expectedOperationResponse = $"Executing function from: {creator.SomeOperation()}";
+
+            String actualOperationResponse = Client.ClientOperation(new ConcreteCreator2());
+
+            Assert.That(actualOperationResponse, Is.EqualTo(expectedOperationResponse));
+        }
     }
 }
